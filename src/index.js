@@ -72,6 +72,7 @@ const render = () => {
   const generateQuestionsList = () => {
     if (!state.questions.length) return Questions.innerText = "No Questions Yet!"
 
+    Questions.innerHTML = null
     state.questions.reverse().map((question, i) => {
       const formattedQuestion = document.createElement('div')
       formattedQuestion.key = i
